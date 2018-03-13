@@ -1,0 +1,6 @@
+clone_folder: $(HOME)/foobar
+
+test_script:
+- sh: ls -ltra $HOME
+
+build: off
