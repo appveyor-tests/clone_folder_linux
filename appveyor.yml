@@ -1,6 +1,7 @@
-clone_folder: $(HOME)/foobar
+clone_folder: $(HOME)/foo/bar
 
 test_script:
 - sh: ls -ltra $HOME
+- sh: ls -ltra $HOME/foo
 
 build: off
