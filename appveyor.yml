@@ -7,5 +7,7 @@ clone_folder: $(HOME)/foo/bar
 test_script:
 - sh: ls -ltra $HOME
 - sh: ls -ltra $HOME/foo
+- sh: CLONEROOTFILES="$(find $HOME/foo -user root)"
+- sh: if [[ -n "$CLONEROOTFILES" ]]; then echo "Found root owned files in clone folder!"; echo -n "$CLONEROOTFILES"; echo; return 1; fi
 
 build: off
